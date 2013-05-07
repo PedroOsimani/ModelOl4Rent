@@ -19,6 +19,6 @@ namespace ModelOl4Rent.Models
         public string Contenido { get; set; }
         public System.DateTime FechaHora { get; set; }
     
-        public virtual SitioOrigenDatos SitioOrigenDatos { get; set; }
+        public virtual ConfiguracionOrigenDatos Configuracion { get; set; }
     }
 }

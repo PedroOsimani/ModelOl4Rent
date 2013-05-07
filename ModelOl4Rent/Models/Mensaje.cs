@@ -17,8 +17,8 @@ namespace ModelOl4Rent.Models
         public int Id { get; set; }
         public string Texto { get; set; }
         public System.DateTime FechaHora { get; set; }
+        public bool Leido { get; set; }
     
-        public virtual BuzonMensaje BuzonMensaje { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Usuario Remitente { get; set; }
     }
 }

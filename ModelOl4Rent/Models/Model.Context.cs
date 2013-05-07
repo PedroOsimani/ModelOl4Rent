@@ -34,16 +34,16 @@ namespace ModelOl4Rent.Models
         public DbSet<Contenido> ContenidoSet { get; set; }
         public DbSet<Adjunto> AdjuntoSet { get; set; }
         public DbSet<Usuario> UsuarioSet { get; set; }
-        public DbSet<SitioOrigenDatos> SitioOrigenDatosSet { get; set; }
-        public DbSet<CaracteristicaBien> CaracteristicaBienSet { get; set; }
+        public DbSet<ConfiguracionOrigenDatos> ConfiguracionOrigenDatosSet { get; set; }
         public DbSet<Rol> RolSet { get; set; }
-        public DbSet<HabilitacionUsuarioSitio> HabilitacionUsuarioSitioSet { get; set; }
-        public DbSet<BuzonMensaje> BuzonMensajeSet { get; set; }
+        public DbSet<HabilitacionUsuario> HabilitacionUsuarioSet { get; set; }
+        public DbSet<BuzonMensajes> BuzonMensajesSet { get; set; }
         public DbSet<Mensaje> MensajeSet { get; set; }
         public DbSet<EspecificacionBien> EspecificacionBienSet { get; set; }
-        public DbSet<ValorCaracteristicaEspecificacion> ValorCaracteristicaEspecificacionSet { get; set; }
+        public DbSet<ValorCaracteristica> ValorCaracteristicaSet { get; set; }
         public DbSet<MeGusta> MeGustaSet { get; set; }
         public DbSet<Atributo> AtributoSet { get; set; }
-        public DbSet<ValorAtributoNovedad> ValorAtributoNovedadSet { get; set; }
+        public DbSet<ValorAtributo> ValorAtributoSet { get; set; }
+        public DbSet<Sesion> SesionSet { get; set; }
     }
 }

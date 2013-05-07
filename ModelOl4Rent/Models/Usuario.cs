@@ -16,15 +16,9 @@ namespace ModelOl4Rent.Models
     {
         public Usuario()
         {
-            this.Rol = new HashSet<Rol>();
-            this.Sitios = new HashSet<Sitio>();
-            this.HabilitacionesUsuarioSitio = new HashSet<HabilitacionUsuarioSitio>();
-            this.Bienes = new HashSet<Bien>();
-            this.BuzonesMensajes = new HashSet<BuzonMensaje>();
-            this.MensajesEnviados = new HashSet<Mensaje>();
-            this.WishList = new HashSet<EspecificacionBien>();
-            this.BienesMeGusta = new HashSet<MeGusta>();
-            this.Contenidos = new HashSet<Contenido>();
+            this.Roles = new HashSet<Rol>();
+            this.SitiosAdministrados = new HashSet<Sitio>();
+            this.BuzonesMensajes = new HashSet<BuzonMensajes>();
         }
     
         public int Id { get; set; }
@@ -36,14 +30,8 @@ namespace ModelOl4Rent.Models
         public string UsuarioFacebook { get; set; }
         public string UsuarioTwitter { get; set; }
     
-        public virtual ICollection<Rol> Rol { get; set; }
-        public virtual ICollection<Sitio> Sitios { get; set; }
-        public virtual ICollection<HabilitacionUsuarioSitio> HabilitacionesUsuarioSitio { get; set; }
-        public virtual ICollection<Bien> Bienes { get; set; }
-        public virtual ICollection<BuzonMensaje> BuzonesMensajes { get; set; }
-        public virtual ICollection<Mensaje> MensajesEnviados { get; set; }
-        public virtual ICollection<EspecificacionBien> WishList { get; set; }
-        public virtual ICollection<MeGusta> BienesMeGusta { get; set; }
-        public virtual ICollection<Contenido> Contenidos { get; set; }
+        public virtual ICollection<Rol> Roles { get; set; }
+        public virtual ICollection<Sitio> SitiosAdministrados { get; set; }
+        public virtual ICollection<BuzonMensajes> BuzonesMensajes { get; set; }
     }
 }

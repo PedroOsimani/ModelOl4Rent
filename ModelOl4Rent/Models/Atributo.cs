@@ -14,15 +14,7 @@ namespace ModelOl4Rent.Models
     
     public partial class Atributo
     {
-        public Atributo()
-        {
-            this.ValorAtributoNovedad = new HashSet<ValorAtributoNovedad>();
-        }
-    
         public int Id { get; set; }
         public string Nombre { get; set; }
-    
-        public virtual OrigenDatos OrigenDatos { get; set; }
-        public virtual ICollection<ValorAtributoNovedad> ValorAtributoNovedad { get; set; }
     }
 }

@@ -17,8 +17,7 @@ namespace ModelOl4Rent.Models
         public Bien()
         {
             this.Contenidos = new HashSet<Contenido>();
-            this.CaracteristicaBien = new HashSet<CaracteristicaBien>();
-            this.MeGusta = new HashSet<MeGusta>();
+            this.ValoresCaracteristicas = new HashSet<ValorCaracteristica>();
         }
     
         public int Id { get; set; }
@@ -35,9 +34,8 @@ namespace ModelOl4Rent.Models
         public short DuracionAlquiler { get; set; }
     
         public virtual ICollection<Contenido> Contenidos { get; set; }
-        public virtual ICollection<CaracteristicaBien> CaracteristicaBien { get; set; }
         public virtual TipoBien TipoBien { get; set; }
         public virtual Usuario Usuario { get; set; }
-        public virtual ICollection<MeGusta> MeGusta { get; set; }
+        public virtual ICollection<ValorCaracteristica> ValoresCaracteristicas { get; set; }
     }
 }

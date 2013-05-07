@@ -12,12 +12,13 @@ namespace ModelOl4Rent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ValorCaracteristicaEspecificacion
+    public partial class HabilitacionUsuario
     {
         public int Id { get; set; }
-        public string Valor { get; set; }
+        public short CantContBloq { get; set; }
+        public bool Habilitado { get; set; }
     
-        public virtual EspecificacionBien EspecificacionBien { get; set; }
-        public virtual Caracteristica Caracteristica { get; set; }
+        public virtual Usuario Usuario { get; set; }
+        public virtual Sitio Sitio { get; set; }
     }
 }

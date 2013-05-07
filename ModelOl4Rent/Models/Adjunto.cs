@@ -19,7 +19,5 @@ namespace ModelOl4Rent.Models
         public string NombreArchivo { get; set; }
         public string Formato { get; set; }
         public TipoAdjunto Tipo { get; set; }
-    
-        public virtual Contenido Contenido { get; set; }
     }
 }

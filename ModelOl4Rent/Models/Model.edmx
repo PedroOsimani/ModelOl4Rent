@@ -38,27 +38,18 @@
             <End Role="Contenido" EntitySet="ContenidoSet" />
           </AssociationSet>
           <EntitySet Name="UsuarioSet" EntityType="Model.Usuario" />
-          <EntitySet Name="SitioOrigenDatosSet" EntityType="Model.SitioOrigenDatos" />
+          <EntitySet Name="ConfiguracionOrigenDatosSet" EntityType="Model.ConfiguracionOrigenDatos" />
           <AssociationSet Name="SitioSitioOrigenDatos" Association="Model.SitioSitioOrigenDatos">
             <End Role="Sitio" EntitySet="SitioSet1" />
-            <End Role="SitioOrigenDatos" EntitySet="SitioOrigenDatosSet" />
+            <End Role="SitioOrigenDatos" EntitySet="ConfiguracionOrigenDatosSet" />
           </AssociationSet>
           <AssociationSet Name="SitioOrigenDatosOrigenDato" Association="Model.SitioOrigenDatosOrigenDato">
-            <End Role="SitioOrigenDatos" EntitySet="SitioOrigenDatosSet" />
+            <End Role="SitioOrigenDatos" EntitySet="ConfiguracionOrigenDatosSet" />
             <End Role="OrigenDato" EntitySet="OrigenDatosSet" />
           </AssociationSet>
           <AssociationSet Name="NovedadSitioOrigenDatos" Association="Model.NovedadSitioOrigenDatos">
             <End Role="Novedad" EntitySet="NovedadSet" />
-            <End Role="SitioOrigenDatos" EntitySet="SitioOrigenDatosSet" />
-          </AssociationSet>
-          <EntitySet Name="CaracteristicaBienSet" EntityType="Model.CaracteristicaBien" />
-          <AssociationSet Name="BienCaracteristicaBien" Association="Model.BienCaracteristicaBien">
-            <End Role="Bien" EntitySet="BienSet1" />
-            <End Role="CaracteristicaBien" EntitySet="CaracteristicaBienSet" />
-          </AssociationSet>
-          <AssociationSet Name="CaracteristicaCaracteristicaBien" Association="Model.CaracteristicaCaracteristicaBien">
-            <End Role="Caracteristica" EntitySet="CaracteristicaSet1" />
-            <End Role="CaracteristicaBien" EntitySet="CaracteristicaBienSet" />
+            <End Role="SitioOrigenDatos" EntitySet="ConfiguracionOrigenDatosSet" />
           </AssociationSet>
           <EntitySet Name="RolSet" EntityType="Model.Rol" />
           <AssociationSet Name="UsuarioRol" Association="Model.UsuarioRol">
@@ -69,13 +60,13 @@
             <End Role="Usuario" EntitySet="UsuarioSet" />
             <End Role="Sitio" EntitySet="SitioSet1" />
           </AssociationSet>
-          <EntitySet Name="HabilitacionUsuarioSitioSet" EntityType="Model.HabilitacionUsuarioSitio" />
+          <EntitySet Name="HabilitacionUsuarioSet" EntityType="Model.HabilitacionUsuario" />
           <AssociationSet Name="UsuarioHabilitacionUsuarioSitio" Association="Model.UsuarioHabilitacionUsuarioSitio">
             <End Role="Usuario" EntitySet="UsuarioSet" />
-            <End Role="HabilitacionUsuarioSitio" EntitySet="HabilitacionUsuarioSitioSet" />
+            <End Role="HabilitacionUsuarioSitio" EntitySet="HabilitacionUsuarioSet" />
           </AssociationSet>
           <AssociationSet Name="HabilitacionUsuarioSitioSitio" Association="Model.HabilitacionUsuarioSitioSitio">
-            <End Role="HabilitacionUsuarioSitio" EntitySet="HabilitacionUsuarioSitioSet" />
+            <End Role="HabilitacionUsuarioSitio" EntitySet="HabilitacionUsuarioSet" />
             <End Role="Sitio" EntitySet="SitioSet1" />
           </AssociationSet>
           <AssociationSet Name="BienTipoBien" Association="Model.BienTipoBien">
@@ -86,15 +77,15 @@
             <End Role="Bien" EntitySet="BienSet1" />
             <End Role="Usuario" EntitySet="UsuarioSet" />
           </AssociationSet>
-          <EntitySet Name="BuzonMensajeSet" EntityType="Model.BuzonMensaje" />
+          <EntitySet Name="BuzonMensajesSet" EntityType="Model.BuzonMensajes" />
           <AssociationSet Name="UsuarioBuzonMensajes" Association="Model.UsuarioBuzonMensajes">
             <End Role="Usuario" EntitySet="UsuarioSet" />
-            <End Role="BuzonMensajes" EntitySet="BuzonMensajeSet" />
+            <End Role="BuzonMensajes" EntitySet="BuzonMensajesSet" />
           </AssociationSet>
           <EntitySet Name="MensajeSet" EntityType="Model.Mensaje" />
           <AssociationSet Name="MensajeBuzonMensaje" Association="Model.MensajeBuzonMensaje">
             <End Role="Mensaje" EntitySet="MensajeSet" />
-            <End Role="BuzonMensaje" EntitySet="BuzonMensajeSet" />
+            <End Role="BuzonMensaje" EntitySet="BuzonMensajesSet" />
           </AssociationSet>
           <AssociationSet Name="MensajeUsuario" Association="Model.MensajeUsuario">
             <End Role="Mensaje" EntitySet="MensajeSet" />
@@ -109,13 +100,13 @@
             <End Role="EspecificacionBien" EntitySet="EspecificacionBienSet" />
             <End Role="TipoBien" EntitySet="TipoBienSet" />
           </AssociationSet>
-          <EntitySet Name="ValorCaracteristicaEspecificacionSet" EntityType="Model.ValorCaracteristicaEspecificacion" />
+          <EntitySet Name="ValorCaracteristicaSet" EntityType="Model.ValorCaracteristica" />
           <AssociationSet Name="EspecificacionBienValorCaracteristicaEspecificacion" Association="Model.EspecificacionBienValorCaracteristicaEspecificacion">
             <End Role="EspecificacionBien" EntitySet="EspecificacionBienSet" />
-            <End Role="ValorCaracteristicaEspecificacion" EntitySet="ValorCaracteristicaEspecificacionSet" />
+            <End Role="ValorCaracteristicaEspecificacion" EntitySet="ValorCaracteristicaSet" />
           </AssociationSet>
           <AssociationSet Name="ValorCaracteristicaEspecificacionCaracteristica" Association="Model.ValorCaracteristicaEspecificacionCaracteristica">
-            <End Role="ValorCaracteristicaEspecificacion" EntitySet="ValorCaracteristicaEspecificacionSet" />
+            <End Role="ValorCaracteristicaEspecificacion" EntitySet="ValorCaracteristicaSet" />
             <End Role="Caracteristica" EntitySet="CaracteristicaSet1" />
           </AssociationSet>
           <EntitySet Name="MeGustaSet" EntityType="Model.MeGusta" />
@@ -136,14 +127,23 @@
             <End Role="Atributo" EntitySet="AtributoSet" />
             <End Role="OrigenDatos" EntitySet="OrigenDatosSet" />
           </AssociationSet>
-          <EntitySet Name="ValorAtributoNovedadSet" EntityType="Model.ValorAtributoNovedad" />
+          <EntitySet Name="ValorAtributoSet" EntityType="Model.ValorAtributo" />
           <AssociationSet Name="AtributoValorAtributoNovedad" Association="Model.AtributoValorAtributoNovedad">
             <End Role="Atributo" EntitySet="AtributoSet" />
-            <End Role="ValorAtributoNovedad" EntitySet="ValorAtributoNovedadSet" />
+            <End Role="ValorAtributoNovedad" EntitySet="ValorAtributoSet" />
           </AssociationSet>
           <AssociationSet Name="ValorAtributoNovedadSitioOrigenDatos" Association="Model.ValorAtributoNovedadSitioOrigenDatos">
-            <End Role="ValorAtributoNovedad" EntitySet="ValorAtributoNovedadSet" />
-            <End Role="SitioOrigenDatos" EntitySet="SitioOrigenDatosSet" />
+            <End Role="ValorAtributoNovedad" EntitySet="ValorAtributoSet" />
+            <End Role="SitioOrigenDatos" EntitySet="ConfiguracionOrigenDatosSet" />
+          </AssociationSet>
+          <EntitySet Name="SesionSet" EntityType="Model.Sesion" />
+          <AssociationSet Name="SesionUsuario" Association="Model.SesionUsuario">
+            <End Role="Sesion" EntitySet="SesionSet" />
+            <End Role="Usuario" EntitySet="UsuarioSet" />
+          </AssociationSet>
+          <AssociationSet Name="ValorCaracteristicaBien" Association="Model.ValorCaracteristicaBien">
+            <End Role="ValorCaracteristica" EntitySet="ValorCaracteristicaSet" />
+            <End Role="Bien" EntitySet="BienSet1" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Sitio">
@@ -152,9 +152,6 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="TipoBien" Relationship="Model.TipoBienSitio" FromRole="Sitio" ToRole="TipoBien" />
-          <NavigationProperty Name="ConfiguracionesOrigenDatos" Relationship="Model.SitioSitioOrigenDatos" FromRole="Sitio" ToRole="SitioOrigenDatos" />
-          <NavigationProperty Name="UsuarioPropietario" Relationship="Model.UsuarioSitio" FromRole="Sitio" ToRole="Usuario" />
-          <NavigationProperty Name="HabilitacionesUsuarioSitio" Relationship="Model.HabilitacionUsuarioSitioSitio" FromRole="Sitio" ToRole="HabilitacionUsuarioSitio" />
           <Property Type="String" Name="Nombre" Nullable="false" />
           <Property Type="String" Name="Descripcion" Nullable="false" />
           <Property Type="Binary" Name="Logo" Nullable="false" />
@@ -170,7 +167,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="SitioOrigenDatos" Relationship="Model.SitioOrigenDatosOrigenDato" FromRole="OrigenDato" ToRole="SitioOrigenDatos" />
           <NavigationProperty Name="Atributos" Relationship="Model.AtributoOrigenDatos" FromRole="OrigenDatos" ToRole="Atributo" />
           <Property Type="String" Name="Nombre" Nullable="false" />
           <Property Type="Binary" Name="Manejador" Nullable="false" />
@@ -182,8 +178,6 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Sitio" Relationship="Model.TipoBienSitio" FromRole="TipoBien" ToRole="Sitio" />
           <NavigationProperty Name="Caracteristicas" Relationship="Model.TipoBienCaracteristica" FromRole="TipoBien" ToRole="Caracteristica" />
-          <NavigationProperty Name="Bienes" Relationship="Model.BienTipoBien" FromRole="TipoBien" ToRole="Bien" />
-          <NavigationProperty Name="EspecificacionesBien" Relationship="Model.EspecificacionBienTipoBien" FromRole="TipoBien" ToRole="EspecificacionBien" />
           <Property Type="String" Name="Nombre" Nullable="false" />
         </EntityType>
         <EntityType Name="Caracteristica">
@@ -191,9 +185,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="TipoBien" Relationship="Model.TipoBienCaracteristica" FromRole="Caracteristica" ToRole="TipoBien" />
-          <NavigationProperty Name="CaracteristicaBien" Relationship="Model.CaracteristicaCaracteristicaBien" FromRole="Caracteristica" ToRole="CaracteristicaBien" />
-          <NavigationProperty Name="ValorCaracteristicaEspecificacion" Relationship="Model.ValorCaracteristicaEspecificacionCaracteristica" FromRole="Caracteristica" ToRole="ValorCaracteristicaEspecificacion" />
           <Property Type="String" Name="Nombre" Nullable="false" />
           <Property Type="Model.TipoDato" Name="Tipo" Nullable="false" />
         </EntityType>
@@ -202,7 +193,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="SitioOrigenDatos" Relationship="Model.NovedadSitioOrigenDatos" FromRole="Novedad" ToRole="SitioOrigenDatos" />
+          <NavigationProperty Name="Configuracion" Relationship="Model.NovedadSitioOrigenDatos" FromRole="Novedad" ToRole="SitioOrigenDatos" />
           <Property Type="String" Name="Titulo" Nullable="false" />
           <Property Type="String" Name="Contenido" Nullable="false" />
           <Property Type="DateTime" Name="FechaHora" Nullable="false" />
@@ -213,10 +204,8 @@
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Contenidos" Relationship="Model.ContenidoBien" FromRole="Bien" ToRole="Contenido" />
-          <NavigationProperty Name="CaracteristicaBien" Relationship="Model.BienCaracteristicaBien" FromRole="Bien" ToRole="CaracteristicaBien" />
           <NavigationProperty Name="TipoBien" Relationship="Model.BienTipoBien" FromRole="Bien" ToRole="TipoBien" />
           <NavigationProperty Name="Usuario" Relationship="Model.BienUsuario" FromRole="Bien" ToRole="Usuario" />
-          <NavigationProperty Name="MeGusta" Relationship="Model.MeGustaBien" FromRole="Bien" ToRole="MeGusta" />
           <Property Type="String" Name="Titulo" Nullable="false" />
           <Property Type="Binary" Name="Foto" Nullable="false" />
           <Property Type="Decimal" Name="Latitud" Nullable="false" />
@@ -228,6 +217,7 @@
           <Property Type="String" Name="Descripcion" Nullable="false" />
           <Property Type="DateTime" Name="FechaAlquiler" Nullable="false" />
           <Property Type="Int16" Name="DuracionAlquiler" Nullable="false" />
+          <NavigationProperty Name="ValoresCaracteristicas" Relationship="Model.ValorCaracteristicaBien" FromRole="Bien" ToRole="ValorCaracteristica" />
         </EntityType>
         <Association Name="TipoBienSitio">
           <End Type="Model.TipoBien" Role="TipoBien" Multiplicity="1" />
@@ -242,8 +232,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Bien" Relationship="Model.ContenidoBien" FromRole="Contenido" ToRole="Bien" />
-          <NavigationProperty Name="Adjunto" Relationship="Model.AdjuntoContenido" FromRole="Contenido" ToRole="Adjunto" />
+          <NavigationProperty Name="Adjuntos" Relationship="Model.AdjuntoContenido" FromRole="Contenido" ToRole="Adjunto" />
           <NavigationProperty Name="Usuario" Relationship="Model.ContenidoUsuario" FromRole="Contenido" ToRole="Usuario" />
           <Property Type="String" Name="Mensaje" Nullable="false" />
           <Property Type="Int16" Name="CantMarcas" Nullable="false" />
@@ -253,7 +242,6 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Contenido" Relationship="Model.AdjuntoContenido" FromRole="Adjunto" ToRole="Contenido" />
           <Property Type="Binary" Name="Data" Nullable="false" />
           <Property Type="String" Name="NombreArchivo" Nullable="false" />
           <Property Type="String" Name="Formato" Nullable="false" />
@@ -272,15 +260,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Rol" Relationship="Model.UsuarioRol" FromRole="Usuario" ToRole="Rol" />
-          <NavigationProperty Name="Sitios" Relationship="Model.UsuarioSitio" FromRole="Usuario" ToRole="Sitio" />
-          <NavigationProperty Name="HabilitacionesUsuarioSitio" Relationship="Model.UsuarioHabilitacionUsuarioSitio" FromRole="Usuario" ToRole="HabilitacionUsuarioSitio" />
-          <NavigationProperty Name="Bienes" Relationship="Model.BienUsuario" FromRole="Usuario" ToRole="Bien" />
+          <NavigationProperty Name="Roles" Relationship="Model.UsuarioRol" FromRole="Usuario" ToRole="Rol" />
+          <NavigationProperty Name="SitiosAdministrados" Relationship="Model.UsuarioSitio" FromRole="Usuario" ToRole="Sitio" />
           <NavigationProperty Name="BuzonesMensajes" Relationship="Model.UsuarioBuzonMensajes" FromRole="Usuario" ToRole="BuzonMensajes" />
-          <NavigationProperty Name="MensajesEnviados" Relationship="Model.MensajeUsuario" FromRole="Usuario" ToRole="Mensaje" />
-          <NavigationProperty Name="WishList" Relationship="Model.UsuarioWishList" FromRole="Usuario" ToRole="WishList" />
-          <NavigationProperty Name="BienesMeGusta" Relationship="Model.UsuarioMeGusta" FromRole="Usuario" ToRole="MeGusta" />
-          <NavigationProperty Name="Contenidos" Relationship="Model.ContenidoUsuario" FromRole="Usuario" ToRole="Contenido" />
           <Property Type="String" Name="Nombre" Nullable="false" />
           <Property Type="String" Name="Apellido" Nullable="false" />
           <Property Type="String" Name="Mail" Nullable="false" />
@@ -289,51 +271,32 @@
           <Property Type="String" Name="UsuarioFacebook" Nullable="false" />
           <Property Type="String" Name="UsuarioTwitter" Nullable="false" />
         </EntityType>
-        <EntityType Name="SitioOrigenDatos">
+        <EntityType Name="ConfiguracionOrigenDatos">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Sitio" Relationship="Model.SitioSitioOrigenDatos" FromRole="SitioOrigenDatos" ToRole="Sitio" />
           <NavigationProperty Name="OrigenDatos" Relationship="Model.SitioOrigenDatosOrigenDato" FromRole="SitioOrigenDatos" ToRole="OrigenDato" />
-          <NavigationProperty Name="Novedades" Relationship="Model.NovedadSitioOrigenDatos" FromRole="SitioOrigenDatos" ToRole="Novedad" />
-          <NavigationProperty Name="ValorAtributoNovedad" Relationship="Model.ValorAtributoNovedadSitioOrigenDatos" FromRole="SitioOrigenDatos" ToRole="ValorAtributoNovedad" />
+          <NavigationProperty Name="ValoresAtributo" Relationship="Model.ValorAtributoNovedadSitioOrigenDatos" FromRole="SitioOrigenDatos" ToRole="ValorAtributoNovedad" />
+          <NavigationProperty Name="Sitio" Relationship="Model.SitioSitioOrigenDatos" FromRole="SitioOrigenDatos" ToRole="Sitio" />
         </EntityType>
         <Association Name="SitioSitioOrigenDatos">
           <End Type="Model.Sitio" Role="Sitio" Multiplicity="1" />
-          <End Type="Model.SitioOrigenDatos" Role="SitioOrigenDatos" Multiplicity="*" />
+          <End Type="Model.ConfiguracionOrigenDatos" Role="SitioOrigenDatos" Multiplicity="*" />
         </Association>
         <Association Name="SitioOrigenDatosOrigenDato">
-          <End Type="Model.SitioOrigenDatos" Role="SitioOrigenDatos" Multiplicity="*" />
+          <End Type="Model.ConfiguracionOrigenDatos" Role="SitioOrigenDatos" Multiplicity="*" />
           <End Type="Model.OrigenDatos" Role="OrigenDato" Multiplicity="1" />
         </Association>
         <Association Name="NovedadSitioOrigenDatos">
           <End Type="Model.Novedad" Role="Novedad" Multiplicity="*" />
-          <End Type="Model.SitioOrigenDatos" Role="SitioOrigenDatos" Multiplicity="1" />
-        </Association>
-        <EntityType Name="CaracteristicaBien">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Bien" Relationship="Model.BienCaracteristicaBien" FromRole="CaracteristicaBien" ToRole="Bien" />
-          <NavigationProperty Name="Caracteristica" Relationship="Model.CaracteristicaCaracteristicaBien" FromRole="CaracteristicaBien" ToRole="Caracteristica" />
-          <Property Type="String" Name="Valor" Nullable="false" />
-        </EntityType>
-        <Association Name="BienCaracteristicaBien">
-          <End Type="Model.Bien" Role="Bien" Multiplicity="1" />
-          <End Type="Model.CaracteristicaBien" Role="CaracteristicaBien" Multiplicity="*" />
-        </Association>
-        <Association Name="CaracteristicaCaracteristicaBien">
-          <End Type="Model.Caracteristica" Role="Caracteristica" Multiplicity="1" />
-          <End Type="Model.CaracteristicaBien" Role="CaracteristicaBien" Multiplicity="*" />
+          <End Type="Model.ConfiguracionOrigenDatos" Role="SitioOrigenDatos" Multiplicity="1" />
         </Association>
         <EntityType Name="Rol">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Usuario" Relationship="Model.UsuarioRol" FromRole="Rol" ToRole="Usuario" />
           <Property Type="String" Name="Nombre" Nullable="false" />
         </EntityType>
         <Association Name="UsuarioRol">
@@ -344,7 +307,7 @@
           <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
           <End Type="Model.Sitio" Role="Sitio" Multiplicity="*" />
         </Association>
-        <EntityType Name="HabilitacionUsuarioSitio">
+        <EntityType Name="HabilitacionUsuario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -356,10 +319,10 @@
         </EntityType>
         <Association Name="UsuarioHabilitacionUsuarioSitio">
           <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="Model.HabilitacionUsuarioSitio" Role="HabilitacionUsuarioSitio" Multiplicity="*" />
+          <End Type="Model.HabilitacionUsuario" Role="HabilitacionUsuarioSitio" Multiplicity="*" />
         </Association>
         <Association Name="HabilitacionUsuarioSitioSitio">
-          <End Type="Model.HabilitacionUsuarioSitio" Role="HabilitacionUsuarioSitio" Multiplicity="*" />
+          <End Type="Model.HabilitacionUsuario" Role="HabilitacionUsuarioSitio" Multiplicity="*" />
           <End Type="Model.Sitio" Role="Sitio" Multiplicity="1" />
         </Association>
         <Association Name="BienTipoBien">
@@ -370,31 +333,30 @@
           <End Type="Model.Bien" Role="Bien" Multiplicity="*" />
           <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
         </Association>
-        <EntityType Name="BuzonMensaje">
+        <EntityType Name="BuzonMensajes">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Usuario" Relationship="Model.UsuarioBuzonMensajes" FromRole="BuzonMensajes" ToRole="Usuario" />
-          <NavigationProperty Name="Mensaje" Relationship="Model.MensajeBuzonMensaje" FromRole="BuzonMensaje" ToRole="Mensaje" />
+          <NavigationProperty Name="Mensajes" Relationship="Model.MensajeBuzonMensaje" FromRole="BuzonMensaje" ToRole="Mensaje" />
         </EntityType>
         <Association Name="UsuarioBuzonMensajes">
           <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="Model.BuzonMensaje" Role="BuzonMensajes" Multiplicity="*" />
+          <End Type="Model.BuzonMensajes" Role="BuzonMensajes" Multiplicity="*" />
         </Association>
         <EntityType Name="Mensaje">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="BuzonMensaje" Relationship="Model.MensajeBuzonMensaje" FromRole="Mensaje" ToRole="BuzonMensaje" />
-          <NavigationProperty Name="Usuario" Relationship="Model.MensajeUsuario" FromRole="Mensaje" ToRole="Usuario" />
+          <NavigationProperty Name="Remitente" Relationship="Model.MensajeUsuario" FromRole="Mensaje" ToRole="Usuario" />
           <Property Type="String" Name="Texto" Nullable="false" />
           <Property Type="DateTime" Name="FechaHora" Nullable="false" />
+          <Property Type="Boolean" Name="Leido" Nullable="false" />
         </EntityType>
         <Association Name="MensajeBuzonMensaje">
           <End Type="Model.Mensaje" Role="Mensaje" Multiplicity="*" />
-          <End Type="Model.BuzonMensaje" Role="BuzonMensaje" Multiplicity="1" />
+          <End Type="Model.BuzonMensajes" Role="BuzonMensaje" Multiplicity="1" />
         </Association>
         <Association Name="MensajeUsuario">
           <End Type="Model.Mensaje" Role="Mensaje" Multiplicity="*" />
@@ -407,7 +369,7 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Usuario" Relationship="Model.UsuarioWishList" FromRole="WishList" ToRole="Usuario" />
           <NavigationProperty Name="TipoBien" Relationship="Model.EspecificacionBienTipoBien" FromRole="EspecificacionBien" ToRole="TipoBien" />
-          <NavigationProperty Name="ValorCaracteristicaEspecificacion" Relationship="Model.EspecificacionBienValorCaracteristicaEspecificacion" FromRole="EspecificacionBien" ToRole="ValorCaracteristicaEspecificacion" />
+          <NavigationProperty Name="ValoresCaracteristicas" Relationship="Model.EspecificacionBienValorCaracteristicaEspecificacion" FromRole="EspecificacionBien" ToRole="ValorCaracteristicaEspecificacion" />
           <Property Type="Decimal" Name="Latitud" Nullable="false" />
           <Property Type="Decimal" Name="Longitud" Nullable="false" />
           <Property Type="String" Name="Direccion" Nullable="false" />
@@ -421,21 +383,20 @@
           <End Type="Model.EspecificacionBien" Role="EspecificacionBien" Multiplicity="*" />
           <End Type="Model.TipoBien" Role="TipoBien" Multiplicity="1" />
         </Association>
-        <EntityType Name="ValorCaracteristicaEspecificacion">
+        <EntityType Name="ValorCaracteristica">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="EspecificacionBien" Relationship="Model.EspecificacionBienValorCaracteristicaEspecificacion" FromRole="ValorCaracteristicaEspecificacion" ToRole="EspecificacionBien" />
           <NavigationProperty Name="Caracteristica" Relationship="Model.ValorCaracteristicaEspecificacionCaracteristica" FromRole="ValorCaracteristicaEspecificacion" ToRole="Caracteristica" />
           <Property Type="String" Name="Valor" Nullable="false" />
         </EntityType>
         <Association Name="EspecificacionBienValorCaracteristicaEspecificacion">
-          <End Type="Model.EspecificacionBien" Role="EspecificacionBien" Multiplicity="1" />
-          <End Type="Model.ValorCaracteristicaEspecificacion" Role="ValorCaracteristicaEspecificacion" Multiplicity="*" />
+          <End Type="Model.EspecificacionBien" Role="EspecificacionBien" Multiplicity="0..1" />
+          <End Type="Model.ValorCaracteristica" Role="ValorCaracteristicaEspecificacion" Multiplicity="*" />
         </Association>
         <Association Name="ValorCaracteristicaEspecificacionCaracteristica">
-          <End Type="Model.ValorCaracteristicaEspecificacion" Role="ValorCaracteristicaEspecificacion" Multiplicity="*" />
+          <End Type="Model.ValorCaracteristica" Role="ValorCaracteristicaEspecificacion" Multiplicity="*" />
           <End Type="Model.Caracteristica" Role="Caracteristica" Multiplicity="1" />
         </Association>
         <EntityType Name="MeGusta">
@@ -464,30 +425,27 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="OrigenDatos" Relationship="Model.AtributoOrigenDatos" FromRole="Atributo" ToRole="OrigenDatos" />
-          <NavigationProperty Name="ValorAtributoNovedad" Relationship="Model.AtributoValorAtributoNovedad" FromRole="Atributo" ToRole="ValorAtributoNovedad" />
           <Property Type="String" Name="Nombre" Nullable="false" />
         </EntityType>
         <Association Name="AtributoOrigenDatos">
           <End Type="Model.Atributo" Role="Atributo" Multiplicity="*" />
           <End Type="Model.OrigenDatos" Role="OrigenDatos" Multiplicity="1" />
         </Association>
-        <EntityType Name="ValorAtributoNovedad">
+        <EntityType Name="ValorAtributo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Atributos" Relationship="Model.AtributoValorAtributoNovedad" FromRole="ValorAtributoNovedad" ToRole="Atributo" />
-          <NavigationProperty Name="SitioOrigenDatos" Relationship="Model.ValorAtributoNovedadSitioOrigenDatos" FromRole="ValorAtributoNovedad" ToRole="SitioOrigenDatos" />
+          <NavigationProperty Name="Atributo" Relationship="Model.AtributoValorAtributoNovedad" FromRole="ValorAtributoNovedad" ToRole="Atributo" />
           <Property Type="String" Name="Valor" Nullable="false" />
         </EntityType>
         <Association Name="AtributoValorAtributoNovedad">
           <End Type="Model.Atributo" Role="Atributo" Multiplicity="1" />
-          <End Type="Model.ValorAtributoNovedad" Role="ValorAtributoNovedad" Multiplicity="*" />
+          <End Type="Model.ValorAtributo" Role="ValorAtributoNovedad" Multiplicity="*" />
         </Association>
         <Association Name="ValorAtributoNovedadSitioOrigenDatos">
-          <End Type="Model.ValorAtributoNovedad" Role="ValorAtributoNovedad" Multiplicity="*" />
-          <End Type="Model.SitioOrigenDatos" Role="SitioOrigenDatos" Multiplicity="1" />
+          <End Type="Model.ValorAtributo" Role="ValorAtributoNovedad" Multiplicity="*" />
+          <End Type="Model.ConfiguracionOrigenDatos" Role="SitioOrigenDatos" Multiplicity="1" />
         </Association>
         <EnumType Name="TipoDato">
           <Member Name="ENTERO" Value="1" />
@@ -500,6 +458,25 @@
           <Member Name="IMAGEN" Value="1" />
           <Member Name="VIDEO" Value="2" />
         </EnumType>
+        <EntityType Name="Sesion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="FechaConexion" Nullable="false" />
+          <Property Type="DateTime" Name="UltimoUso" Nullable="false" />
+          <Property Type="DateTime" Name="FechaCierre" Nullable="false" />
+          <Property Type="String" Name="SesionID" Nullable="false" MaxLength="256" />
+          <NavigationProperty Name="Usuario" Relationship="Model.SesionUsuario" FromRole="Sesion" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="SesionUsuario">
+          <End Type="Model.Sesion" Role="Sesion" Multiplicity="*" />
+          <End Type="Model.Usuario" Role="Usuario" Multiplicity="1" />
+        </Association>
+        <Association Name="ValorCaracteristicaBien">
+          <End Type="Model.ValorCaracteristica" Role="ValorCaracteristica" Multiplicity="*" />
+          <End Type="Model.Bien" Role="Bien" Multiplicity="0..1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

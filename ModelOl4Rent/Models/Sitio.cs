@@ -14,12 +14,6 @@ namespace ModelOl4Rent.Models
     
     public partial class Sitio
     {
-        public Sitio()
-        {
-            this.ConfiguracionesOrigenDatos = new HashSet<SitioOrigenDatos>();
-            this.HabilitacionesUsuarioSitio = new HashSet<HabilitacionUsuarioSitio>();
-        }
-    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
@@ -32,8 +26,5 @@ namespace ModelOl4Rent.Models
         public short CantContBloqXUsu { get; set; }
     
         public virtual TipoBien TipoBien { get; set; }
-        public virtual ICollection<SitioOrigenDatos> ConfiguracionesOrigenDatos { get; set; }
-        public virtual Usuario UsuarioPropietario { get; set; }
-        public virtual ICollection<HabilitacionUsuarioSitio> HabilitacionesUsuarioSitio { get; set; }
     }
 }

@@ -16,7 +16,6 @@ namespace ModelOl4Rent.Models
     {
         public OrigenDatos()
         {
-            this.SitioOrigenDatos = new HashSet<SitioOrigenDatos>();
             this.Atributos = new HashSet<Atributo>();
         }
     
@@ -24,7 +23,6 @@ namespace ModelOl4Rent.Models
         public string Nombre { get; set; }
         public byte[] Manejador { get; set; }
     
-        public virtual ICollection<SitioOrigenDatos> SitioOrigenDatos { get; set; }
         public virtual ICollection<Atributo> Atributos { get; set; }
     }
 }

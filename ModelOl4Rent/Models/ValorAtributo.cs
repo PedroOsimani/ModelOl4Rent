@@ -12,16 +12,11 @@ namespace ModelOl4Rent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class BuzonMensaje
+    public partial class ValorAtributo
     {
-        public BuzonMensaje()
-        {
-            this.Mensaje = new HashSet<Mensaje>();
-        }
-    
         public int Id { get; set; }
+        public string Valor { get; set; }
     
-        public virtual Usuario Usuario { get; set; }
-        public virtual ICollection<Mensaje> Mensaje { get; set; }
+        public virtual Atributo Atributo { get; set; }
     }
 }

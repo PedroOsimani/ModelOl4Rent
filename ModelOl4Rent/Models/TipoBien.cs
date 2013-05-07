@@ -17,8 +17,6 @@ namespace ModelOl4Rent.Models
         public TipoBien()
         {
             this.Caracteristicas = new HashSet<Caracteristica>();
-            this.Bienes = new HashSet<Bien>();
-            this.EspecificacionesBien = new HashSet<EspecificacionBien>();
         }
     
         public int Id { get; set; }
@@ -26,7 +24,5 @@ namespace ModelOl4Rent.Models
     
         public virtual Sitio Sitio { get; set; }
         public virtual ICollection<Caracteristica> Caracteristicas { get; set; }
-        public virtual ICollection<Bien> Bienes { get; set; }
-        public virtual ICollection<EspecificacionBien> EspecificacionesBien { get; set; }
     }
 }

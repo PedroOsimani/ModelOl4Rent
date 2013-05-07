@@ -12,19 +12,14 @@ namespace ModelOl4Rent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class SitioOrigenDatos
+    public partial class Sesion
     {
-        public SitioOrigenDatos()
-        {
-            this.Novedades = new HashSet<Novedad>();
-            this.ValorAtributoNovedad = new HashSet<ValorAtributoNovedad>();
-        }
-    
         public int Id { get; set; }
+        public System.DateTime FechaConexion { get; set; }
+        public System.DateTime UltimoUso { get; set; }
+        public System.DateTime FechaCierre { get; set; }
+        public string SesionID { get; set; }
     
-        public virtual Sitio Sitio { get; set; }
-        public virtual OrigenDatos OrigenDatos { get; set; }
-        public virtual ICollection<Novedad> Novedades { get; set; }
-        public virtual ICollection<ValorAtributoNovedad> ValorAtributoNovedad { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

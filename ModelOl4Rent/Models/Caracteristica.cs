@@ -14,18 +14,8 @@ namespace ModelOl4Rent.Models
     
     public partial class Caracteristica
     {
-        public Caracteristica()
-        {
-            this.CaracteristicaBien = new HashSet<CaracteristicaBien>();
-            this.ValorCaracteristicaEspecificacion = new HashSet<ValorCaracteristicaEspecificacion>();
-        }
-    
         public int Id { get; set; }
         public string Nombre { get; set; }
         public TipoDato Tipo { get; set; }
-    
-        public virtual TipoBien TipoBien { get; set; }
-        public virtual ICollection<CaracteristicaBien> CaracteristicaBien { get; set; }
-        public virtual ICollection<ValorCaracteristicaEspecificacion> ValorCaracteristicaEspecificacion { get; set; }
     }
 }

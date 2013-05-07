@@ -12,12 +12,17 @@ namespace ModelOl4Rent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ValorAtributoNovedad
+    public partial class ConfiguracionOrigenDatos
     {
-        public int Id { get; set; }
-        public string Valor { get; set; }
+        public ConfiguracionOrigenDatos()
+        {
+            this.ValoresAtributo = new HashSet<ValorAtributo>();
+        }
     
-        public virtual Atributo Atributos { get; set; }
-        public virtual SitioOrigenDatos SitioOrigenDatos { get; set; }
+        public int Id { get; set; }
+    
+        public virtual OrigenDatos OrigenDatos { get; set; }
+        public virtual ICollection<ValorAtributo> ValoresAtributo { get; set; }
+        public virtual Sitio Sitio { get; set; }
     }
 }

@@ -16,15 +16,14 @@ namespace ModelOl4Rent.Models
     {
         public Contenido()
         {
-            this.Adjunto = new HashSet<Adjunto>();
+            this.Adjuntos = new HashSet<Adjunto>();
         }
     
         public int Id { get; set; }
         public string Mensaje { get; set; }
         public short CantMarcas { get; set; }
     
-        public virtual Bien Bien { get; set; }
-        public virtual ICollection<Adjunto> Adjunto { get; set; }
+        public virtual ICollection<Adjunto> Adjuntos { get; set; }
         public virtual Usuario Usuario { get; set; }
     }
 }

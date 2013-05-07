@@ -12,12 +12,15 @@ namespace ModelOl4Rent.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CaracteristicaBien
+    public partial class BuzonMensajes
     {
-        public int Id { get; set; }
-        public string Valor { get; set; }
+        public BuzonMensajes()
+        {
+            this.Mensajes = new HashSet<Mensaje>();
+        }
     
-        public virtual Bien Bien { get; set; }
-        public virtual Caracteristica Caracteristica { get; set; }
+        public int Id { get; set; }
+    
+        public virtual ICollection<Mensaje> Mensajes { get; set; }
     }
 }

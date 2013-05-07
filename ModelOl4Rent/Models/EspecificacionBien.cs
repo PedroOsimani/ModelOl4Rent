@@ -16,7 +16,7 @@ namespace ModelOl4Rent.Models
     {
         public EspecificacionBien()
         {
-            this.ValorCaracteristicaEspecificacion = new HashSet<ValorCaracteristicaEspecificacion>();
+            this.ValoresCaracteristicas = new HashSet<ValorCaracteristica>();
         }
     
         public int Id { get; set; }
@@ -27,6 +27,6 @@ namespace ModelOl4Rent.Models
     
         public virtual Usuario Usuario { get; set; }
         public virtual TipoBien TipoBien { get; set; }
-        public virtual ICollection<ValorCaracteristicaEspecificacion> ValorCaracteristicaEspecificacion { get; set; }
+        public virtual ICollection<ValorCaracteristica> ValoresCaracteristicas { get; set; }
     }
 }
